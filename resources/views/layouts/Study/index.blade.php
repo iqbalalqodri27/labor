@@ -192,8 +192,8 @@
                         aria-labelledby="myModalLabel8" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                                <div class="modal-header bg-warning white">
-                                    <h4 class="modal-title" id="myModalLabel8">Edit Data Mata Pelajaran</h4>
+                                <div class="modal-header bg-primary white">
+                                    <h4 class="modal-title" id="myModalLabel8">Edit Data Mata Pelajarann</h4>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
