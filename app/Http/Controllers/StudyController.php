@@ -12,7 +12,11 @@ class StudyController extends Controller
      */
     public function index()
     {
-        return view('layouts.study.index');
+
+        $studys = study::all();
+        $title = 'User List';
+
+            return view('layouts.study.index', compact('studys', 'title'));
     }
 
     /**
@@ -28,7 +32,17 @@ class StudyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+                // Lakukan validasi data
+        $validatedData = $request->validate([
+            'name' => 'required',
+            // ... aturan validasi lainnya
+        ]);
+
+        // Simpan data ke database
+        study::create($validatedData);
+
+        // Redirect ke halaman yang diinginkan setelah berhasil
+        return redirect('study');
     }
 
     /**
@@ -52,14 +66,32 @@ class StudyController extends Controller
      */
     public function update(Request $request, study $study)
     {
-        //
+        // $this->validate($request, [
+        //     'name' => 'required',
+        // ]);
+
+        $study->update($request->all());
+        return redirect()->route('study.index')->with('success','Student updated successfully');
+    
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(study $study)
+    public function destroy($id)
     {
-        //
+        // 1. Find the record:
+            $study = study::findOrFail($id); // Find the study by ID, or throw a 404 if not found.
+
+            // 2. (Optional) Delete associated files/images:
+            // If the record has associated files, delete them from storage before deleting the record.
+            // Example: Storage::delete('public/studys/' . $study->image);
+
+            // 3. Delete the record from the database:
+            $study->delete();
+
+            // 4. Redirect with a success message:
+            return redirect()->route('study.index')->with('success', 'study deleted successfully!');
+        
     }
 }

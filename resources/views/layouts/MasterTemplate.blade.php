@@ -30,6 +30,12 @@
     <!-- BEGIN Custom CSS-->
     <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
     <!-- END Custom CSS-->
+
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/tables/datatable/datatables.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="../../../app-assets/vendors/css/tables/extensions/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="../../../app-assets/vendors/css/tables/datatable/buttons.bootstrap4.min.css">
 </head>
 
 <body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click"
@@ -87,9 +93,10 @@
                                     href="{{ route('profile.edit') }}"><i class="ft-user"></i> Edit Profile</a>
                                 <div class="dropdown-divider"></div>
                                 <form method="post" action="{{ route('logout') }}" class="mt-6 space-y-6">
-                                 @csrf
-                                 @method('post')
-                                 <button class="dropdown-item" href="{{ route('logout') }}"><i class="ft-power"></i>logout</button>
+                                    @csrf
+                                    @method('post')
+                                    <button class="dropdown-item" href="{{ route('logout') }}"><i
+                                            class="ft-power"></i>logout</button>
                                     <!-- <a class="dropdown-item" href=""><i class="ft-power"></i> -->
                                     <!-- Logout</a> -->
                                 </form>
@@ -122,12 +129,12 @@
                         </li>
                     </ul>
                 </li> -->
-                <li class=" nav-item"><a href="{{ route('dashboard') }}"><i class="ft-home"></i><span class="menu-title"
-                            data-i18n="">Dashboard</span></a>
+                <li class=" nav-item"><a href="{{ route('dashboard') }}"><i class="ft-home"></i><span
+                            class="menu-title" data-i18n="">Dashboard</span></a>
                 </li>
 
-                <li class=" nav-item"><a href="{{ route('study.index') }}"><i class="ft-edit"></i><span class="menu-title"
-                            data-i18n="">Mata Pelajaran</span></a>
+                <li class=" nav-item"><a href="{{ route('study.index') }}"><i class="ft-edit"></i><span
+                            class="menu-title" data-i18n="">Mata Pelajaran</span></a>
                 </li>
 
                 <li class=" nav-item"><a href="#"><i class="ft-edit"></i><span class="menu-title"
@@ -146,7 +153,7 @@
     </div>
 
     @yield('content')
-    
+
     <!-- ////////////////////////////////////////////////////////////////////////////-->
     <footer class="footer footer-static footer-light navbar-border">
         <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
@@ -171,6 +178,20 @@
     <!-- END STACK JS-->
     <!-- BEGIN PAGE LEVEL JS-->
     <!-- END PAGE LEVEL JS-->
+    {{-- datatables --}}
+    <script src="../../../app-assets/vendors/js/tables/datatable/datatables.min.js" type="text/javascript"></script>
+    <script src="../../../app-assets/vendors/js/tables/datatable/dataTables.buttons.min.js" type="text/javascript"></script>
+    <script src="../../../app-assets/vendors/js/tables/datatable/buttons.bootstrap4.min.js" type="text/javascript"></script>
+    <script src="../../../app-assets/vendors/js/tables/jszip.min.js" type="text/javascript"></script>
+    <script src="../../../app-assets/vendors/js/tables/pdfmake.min.js" type="text/javascript"></script>
+    <script src="../../../app-assets/vendors/js/tables/vfs_fonts.js" type="text/javascript"></script>
+    <script src="../../../app-assets/vendors/js/tables/buttons.html5.min.js" type="text/javascript"></script>
+    <script src="../../../app-assets/vendors/js/tables/buttons.print.min.js" type="text/javascript"></script>
+    <script src="../../../app-assets/vendors/js/tables/buttons.colVis.min.js" type="text/javascript"></script>
+    <script src="../../../app-assets/js/scripts/tables/datatables-extensions/datatable-button/datatable-html5.js"
+        type="text/javascript"></script>
+    {{-- datatables --}}
+
 </body>
 
 </html>
