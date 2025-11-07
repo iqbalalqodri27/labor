@@ -48,7 +48,7 @@
                         <a class="navbar-brand" href="index.html">
                             <img class="brand-logo" alt="stack admin logo"
                                 src="../../../app-assets/images/logo/stack-logo-light.png">
-                            <h2 class="brand-text">Stack</h2>
+                            <h2 class="brand-text">Labor</h2>
                         </a>
                     </li>
                     <li class="nav-item d-md-none">
@@ -81,13 +81,18 @@
                                 <span class="avatar avatar-online">
                                     <img src="../../../app-assets/images/portrait/small/avatar-s-1.png"
                                         alt="avatar"><i></i></span>
-                                <span class="user-name">John Doe</span>
+                                <span class="user-name">{{ Auth::user()->name }}</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item"
-                                    href="user-profile.html"><i class="ft-user"></i> Edit Profile</a>
+                                    href="{{ route('profile.edit') }}"><i class="ft-user"></i> Edit Profile</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="login-with-bg-image.html"><i class="ft-power"></i>
-                                    Logout</a>
+                                <form method="post" action="{{ route('logout') }}" class="mt-6 space-y-6">
+                                 @csrf
+                                 @method('post')
+                                 <button class="dropdown-item" href="{{ route('logout') }}"><i class="ft-power"></i>logout</button>
+                                    <!-- <a class="dropdown-item" href=""><i class="ft-power"></i> -->
+                                    <!-- Logout</a> -->
+                                </form>
                             </div>
                         </li>
                     </ul>
@@ -104,7 +109,8 @@
                     <span>General</span><i class=" ft-minus" data-toggle="tooltip" data-placement="right"
                         data-original-title="General"></i>
                 </li>
-                <li class=" nav-item"><a href="index.html"><i class="ft-home"></i><span class="menu-title"
+
+                <!-- <li class=" nav-item"><a href="index.html"><i class="ft-home"></i><span class="menu-title"
                             data-i18n="">Dashboard</span><span
                             class="badge badge badge-primary badge-pill float-right mr-2">3</span></a>
                     <ul class="menu-content">
@@ -115,154 +121,32 @@
                         <li><a class="menu-item" href="dashboard-fitness.html">Fitness</a>
                         </li>
                     </ul>
+                </li> -->
+                <li class=" nav-item"><a href="{{ route('dashboard') }}"><i class="ft-home"></i><span class="menu-title"
+                            data-i18n="">Dashboard</span></a>
                 </li>
-                <li class=" nav-item"><a href="#"><i class="ft-monitor"></i><span class="menu-title"
-                            data-i18n="">Templates</span></a>
-                    <ul class="menu-content">
-                        <li><a class="menu-item" href="#">Vertical</a>
-                            <ul class="menu-content">
-                                <li><a class="menu-item" href="../vertical-modern-menu-template">Modern Menu</a>
-                                </li>
-                                <li><a class="menu-item" href="../vertical-menu-template">Semi Light</a>
-                                </li>
-                                <li><a class="menu-item" href="../vertical-menu-template-semi-dark">Semi Dark</a>
-                                </li>
-                                <li><a class="menu-item" href="../vertical-menu-template-nav-dark">Nav Dark</a>
-                                </li>
-                                <li><a class="menu-item" href="../vertical-menu-template-light">Light</a>
-                                </li>
-                                <li><a class="menu-item" href="../vertical-overlay-menu-template">Overlay Menu</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a class="menu-item" href="#">Horizontal</a>
-                            <ul class="menu-content">
-                                <li><a class="menu-item" href="../horizontal-menu-template">Classic</a>
-                                </li>
-                                <li><a class="menu-item" href="../horizontal-menu-template-nav">Nav Dark</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+
+                <li class=" nav-item"><a href="{{ route('study.index') }}"><i class="ft-edit"></i><span class="menu-title"
+                            data-i18n="">Mata Pelajaran</span></a>
                 </li>
 
                 <li class=" nav-item"><a href="#"><i class="ft-edit"></i><span class="menu-title"
-                            data-i18n="">Forms</span></a>
-                    <ul class="menu-content">
-                        <li><a class="menu-item" href="#">Form Elements</a>
-                            <ul class="menu-content">
-                                <li><a class="menu-item" href="form-inputs.html">Form Inputs</a>
-                                </li>
-                                <li><a class="menu-item" href="form-input-groups.html">Input Groups</a>
-                                </li>
-                                <li><a class="menu-item" href="form-input-grid.html">Input Grid</a>
-                                </li>
-                                <li><a class="menu-item" href="form-extended-inputs.html">Extended Inputs</a>
-                                </li>
-                                <li><a class="menu-item" href="form-checkboxes-radios.html">Checkboxes &amp;
-                                        Radios</a>
-                                </li>
-                                <li><a class="menu-item" href="form-switch.html">Switch</a>
-                                </li>
-                                <li><a class="menu-item" href="form-select2.html">Select2</a>
-                                </li>
-                                <li><a class="menu-item" href="form-tags-input.html">Tags Input</a>
-                                </li>
-                                <li><a class="menu-item" href="form-validation.html">Validation</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a class="menu-item" href="#">Form Layouts</a>
-                            <ul class="menu-content">
-                                <li><a class="menu-item" href="form-layout-basic.html">Basic Forms</a>
-                                </li>
-                                <li><a class="menu-item" href="form-layout-horizontal.html">Horizontal Forms</a>
-                                </li>
-                                <li><a class="menu-item" href="form-layout-hidden-labels.html">Hidden Labels</a>
-                                </li>
-                                <li><a class="menu-item" href="form-layout-form-actions.html">Form Actions</a>
-                                </li>
-                                <li><a class="menu-item" href="form-layout-bordered.html">Bordered</a>
-                                </li>
-                                <li><a class="menu-item" href="form-layout-striped-rows.html">Striped Rows</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a class="menu-item" href="form-dual-listbox.html"
-                                data-i18n="nav.form_elements.form_dual_listbox">Dual
-                                Listbox</a>
-                        </li>
-                        <li><a class="menu-item" href="form-wizard.html">Form Wizard</a>
-                        </li>
-                        <li><a class="menu-item" href="form-repeater.html">Form Repeater</a>
-                        </li>
-                    </ul>
+                            data-i18n="">Kelas</span></a>
+                </li>
+
+                <li class=" nav-item"><a href="#"><i class="ft-user"></i><span class="menu-title"
+                            data-i18n="">Dosen</span></a>
+                </li>
+
+                <li class=" nav-item"><a href="#"><i class="ft-monitor"></i><span class="menu-title"
+                            data-i18n="">pengguna Laborlaturium</span></a>
                 </li>
             </ul>
         </div>
     </div>
 
-
-    <div class="app-content content">
-        <div class="content-wrapper">
-            <div class="content-header row">
-                <div class="content-header-left col-md-6 col-12 mb-2">
-                    <div class="row breadcrumbs-top">
-                        <div class="breadcrumb-wrapper col-12">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a>
-                                </li>
-                                <li class="breadcrumb-item"><a href="#">Components</a>
-                                </li>
-                                <li class="breadcrumb-item active">Card Actions
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                    <h3 class="content-header-title mb-0">Card Actions</h3>
-                </div>
-
-            </div>
-            <div class="content-body">
-                <!-- card actions section start -->
-                <section id="card-actions">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Card Actions Example</h4>
-                                    <a class="heading-elements-toggle"><i
-                                            class="fa fa-ellipsis-v font-medium-3"></i></a>
-                                    <div class="heading-elements">
-                                        <ul class="list-inline mb-0">
-                                            <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
-                                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
-                                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
-                                            <li><a data-action="close"><i class="ft-x"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="card-content collapse show">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-xl-6 col-lg-12 mb-2">
-                                                test
-                                            </div>
-                                            <div class="col-xl-6 col-lg-12">
-                                                test2
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
-                <!-- // card-actions section end -->
-            </div>
-        </div>
-    </div>
+    @yield('content')
+    
     <!-- ////////////////////////////////////////////////////////////////////////////-->
     <footer class="footer footer-static footer-light navbar-border">
         <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">

@@ -12,7 +12,7 @@ class StudyController extends Controller
      */
     public function index()
     {
-        //
+        return view('layouts.study.index');
     }
 
     /**
