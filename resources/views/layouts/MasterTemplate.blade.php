@@ -129,22 +129,23 @@
                         </li>
                     </ul>
                 </li> -->
-                <li class=" nav-item"><a href="{{ route('dashboard') }}"><i class="ft-home"></i><span
+                <li class=" {{ Request::is('dashboard') ? 'active' : '' }} nav-item"><a href="{{ route('dashboard') }}"><i class="ft-home"></i><span
+                            
                             class="menu-title" data-i18n="">Dashboard</span></a>
                 </li>
 
-                <li class=" nav-item"><a href="{{ route('study.index') }}"><i class="ft-edit"></i><span
+                <li class=" {{ Request::is('study') ? 'active' : '' }} nav-item"><a href="{{ route('study.index') }}"><i class="ft-edit"></i><span
                             class="menu-title" data-i18n="">Mata Pelajaran</span></a>
                 </li>
 
-                <li class=" nav-item"><a href="/classroom"><i class="ft-edit"></i><span class="menu-title"
+                <li class=" {{ Request::is('classroom') ? 'active' : '' }} nav-item"><a href="/classroom"><i class="ft-edit"></i><span class="menu-title"
                             data-i18n="">Kelas</span></a>
                 </li>
 
-                <li class=" nav-item"><a href="/teacher"><i class="ft-user"></i><span class="menu-title"
+                <li class=" {{ Request::is('teacher') ? 'active' : '' }} nav-item"><a href="/teacher"><i class="ft-user"></i><span class="menu-title"
                             data-i18n="">Dosen</span></a>
                 </li>
-                <li class=" nav-item"><a href="/LaboratoryUse"><i class="ft-monitor"></i><span class="menu-title"
+                <li class=" {{ Request::is('LaboratoryUse') ? 'active' : '' }} nav-item"><a href="/LaboratoryUse"><i class="ft-monitor"></i><span class="menu-title"
                             data-i18n="">pengguna Laborlaturium</span></a>
                 </li>
             </ul>

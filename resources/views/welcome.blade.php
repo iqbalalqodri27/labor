@@ -52,6 +52,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
         <script src="template1/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
 <!--
 	Venue Template
 	http://www.templatemo.com/tm-522-venue
@@ -111,13 +112,13 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="banner-caption">
                         <div class="line-dec"></div>
-                        <h2>Universitas </h2>
-                        <span>Selamat Datang Di website Informasi Penggunaan Laboraturiun di  Universitas ..</span>
+                        {{-- <h2>Universitas </h2>
+                        <span>Selamat Datang Di website Informasi Penggunaan Laboraturiun di  Universitas ..</span> --}}
                         <div class="blue-button">
                             <!-- <a class="scrollTo" data-scrollTo="popular" href="#">Discover More</a> -->
                         </div>
                     </div>
-                    <div class="submit-form">
+                    {{-- <div class="submit-form">
                         <form id="form-submit" action="" method="get">
                             <div class="row">
                                 <div class="col-md-3 first-item">
@@ -151,7 +152,7 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -162,18 +163,21 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <span>Popular Places</span>
-                        <h2>Integer sapien odio</h2>
+                        <span>Berita Terbaru</span>
+
+                        <h2>
+                        Penerimaan Mahasiswa Baru STT Pekerjaan Umum Jakarta TA 2025/2026 Ganjil Telah Dibuka!
+                        Klik untuk mendaftar PENDAFTARAN</span></h2>
                     </div>
                 </div> 
             </div> 
             <div class="owl-carousel owl-theme">
                 <div class="item popular-item">
                     <div class="thumb">
-                        <img src="img/popular_item_1.jpg" alt="">
+                        <img src="https://sttpu.ac.id/wp-content/uploads/2025/05/jadi.jpg" alt="">
                         <div class="text-content">
-                            <h4>Mauris tempus</h4>
-                            <span>76 listings</span>
+                            <h4>.</h4>
+                            <span>.</span>
                         </div>
                         <div class="plus-button">
                             <a href="#"><i class="fa fa-plus"></i></a>
@@ -182,10 +186,10 @@
                 </div>
                 <div class="item popular-item">
                     <div class="thumb">
-                        <img src="img/popular_item_2.jpg" alt="">
+                        <img src="https://sttpu.ac.id/wp-content/uploads/2025/05/csacc.jpg" alt="">
                         <div class="text-content">
-                            <h4>Aenean dolor</h4>
-                            <span>18 listings</span>
+                            <h4>.</h4>
+                            <span>.</span>
                         </div>
                         <div class="plus-button">
                             <a href="#"><i class="fa fa-plus"></i></a>
@@ -194,154 +198,10 @@
                 </div>
                 <div class="item popular-item">
                     <div class="thumb">
-                        <img src="img/popular_item_3.jpg" alt="">
+                        <img src="https://sttpu.ac.id/wp-content/uploads/2025/05/post-web_page-0001.jpg" alt="">
                         <div class="text-content">
-                            <h4>Nunc at quam</h4>
-                            <span>55 listings</span>
-                        </div>
-                        <div class="plus-button">
-                            <a href="#"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item popular-item">
-                    <div class="thumb">
-                        <img src="img/popular_item_4.jpg" alt="">
-                        <div class="text-content">
-                            <h4>Fusce ac turpis</h4>
-                            <span>66 listings</span>
-                        </div>
-                        <div class="plus-button">
-                            <a href="#"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item popular-item">
-                    <div class="thumb">
-                        <img src="img/popular_item_5.jpg" alt="">
-                        <div class="text-content">
-                            <h4>Lorem ipsum</h4>
-                            <span>82 listings</span>
-                        </div>
-                        <div class="plus-button">
-                            <a href="#"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item popular-item">
-                    <div class="thumb">
-                        <img src="img/popular_item_1.jpg" alt="">
-                        <div class="text-content">
-                            <h4>Praesent nec</h4>
-                            <span>76 listings</span>
-                        </div>
-                        <div class="plus-button">
-                            <a href="#"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item popular-item">
-                    <div class="thumb">
-                        <img src="img/popular_item_2.jpg" alt="">
-                        <div class="text-content">
-                            <h4>Suspendisse</h4>
-                            <span>36 listings</span>
-                        </div>
-                        <div class="plus-button">
-                            <a href="#"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item popular-item">
-                    <div class="thumb">
-                        <img src="img/popular_item_3.jpg" alt="">
-                        <div class="text-content">
-                            <h4>Bibendum</h4>
-                            <span>48 listings</span>
-                        </div>
-                        <div class="plus-button">
-                            <a href="#"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item popular-item">
-                    <div class="thumb">
-                        <img src="img/popular_item_4.jpg" alt="">
-                        <div class="text-content">
-                            <h4>Quisque sodales</h4>
-                            <span>66 listings</span>
-                        </div>
-                        <div class="plus-button">
-                            <a href="#"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item popular-item">
-                    <div class="thumb">
-                        <img src="img/popular_item_5.jpg" alt="">
-                        <div class="text-content">
-                            <h4>Pellentesque</h4>
-                            <span>85 listings</span>
-                        </div>
-                        <div class="plus-button">
-                            <a href="#"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item popular-item">
-                    <div class="thumb">
-                        <img src="img/popular_item_1.jpg" alt="">
-                        <div class="text-content">
-                            <h4>Commodo</h4>
-                            <span>76 listings</span>
-                        </div>
-                        <div class="plus-button">
-                            <a href="#"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item popular-item">
-                    <div class="thumb">
-                        <img src="img/popular_item_2.jpg" alt="">
-                        <div class="text-content">
-                            <h4>Adipiscing</h4>
-                            <span>32 listings</span>
-                        </div>
-                        <div class="plus-button">
-                            <a href="#"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item popular-item">
-                    <div class="thumb">
-                        <img src="img/popular_item_3.jpg" alt="">
-                        <div class="text-content">
-                            <h4>Etiam hendrerit</h4>
-                            <span>49 listings</span>
-                        </div>
-                        <div class="plus-button">
-                            <a href="#"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item popular-item">
-                    <div class="thumb">
-                        <img src="img/popular_item_4.jpg" alt="">
-                        <div class="text-content">
-                            <h4>Suspendisse</h4>
-                            <span>63 listings</span>
-                        </div>
-                        <div class="plus-button">
-                            <a href="#"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item popular-item">
-                    <div class="thumb">
-                        <img src="img/popular_item_5.jpg" alt="">
-                        <div class="text-content">
-                            <h4>Sit amet dictum</h4>
-                            <span>86 listings</span>
+                            <h4>.</h4>
+                            <span>.</span>
                         </div>
                         <div class="plus-button">
                             <a href="#"><i class="fa fa-plus"></i></a>
@@ -351,6 +211,7 @@
             </div>
         </div>
     </section>
+
 
 
 
@@ -744,9 +605,10 @@
                 <div class="col-md-5">
                     <div class="about-veno">
                         <div class="logo">
-                            <img src="img/footer_logo.png" alt="Venue Logo">
+                            <img src="template1/img/logo.png" alt="Venue Logo">
+                            {{-- STT PEKERJAAN UMUM JAKARTA --}}
                         </div>
-                        <p>Mauris sit amet quam congue, pulvinar urna et, congue diam. Suspendisse eu lorem massa. Integer sit amet posuere tellus, id efficitur leo. In hac habitasse platea dictumst.</p>
+                        <p>Sekolah Tinggi Teknologi Pekerjaan Umum Jakarta dibawah yayasan Pendidikan Putra</p>
                         <ul class="social-icons">
                             <li>
                                 <a href="#"><i class="fa fa-facebook"></i></a>
@@ -816,5 +678,15 @@
     <script src="template1/js/datepicker.js"></script>
     <script src="template1/js/plugins.js"></script>
     <script src="template1/js/main.js"></script>
+
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    
+    <script src="js/datepicker.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
