@@ -74,6 +74,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                            @if ($studys->isNotEmpty())
                                                 @foreach ($studys as $study)
                                                     <tr>
                                                         <td>{{ $study->name }}</td>
@@ -97,13 +98,12 @@
                                                             </form>
                                                         </td>
                                                     </tr>
-                                                    {{-- @empty
-                                                        <div class="alert alert-danger">
+                                                @endforeach
+                                                @else
+                                                    <div class="alert alert-danger">
                                                             Data Products belum ada.
                                                         </div>
-                                                    @endempty --}}
-                                                @endforeach
-
+                                                @endif
                                                 </tr>
 
                                             </tbody>
@@ -198,8 +198,9 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
+                                @if ($studys->isNotEmpty()) 
                                 <form action="{{ route('study.update', $study->id) }}" method="post">
-                                    @csrf
+                                 @csrf
                                     @method('PUT')
                                     <div class="modal-body">
                                         <div class="card">
@@ -255,6 +256,67 @@
                             </div>
                         </div>
                     </div>
+                                @else
+                                <form action="" method="post">
+                                 @csrf
+                                    @method('PUT')
+                                    <div class="modal-body">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                {{-- <h4 class="card-title" id="basic-layout-form">Project Info</h4> --}}
+                                                <a class="heading-elements-toggle"><i
+                                                        class="fa fa-ellipsis-v font-medium-3"></i></a>
+                                            </div>
+                                            <div class="card-content collapse show">
+                                                <div class="card-body">
+                                                    {{-- <form class="form"> --}}
+                                                    <div class="form-body">
+                                                        {{-- <h4 class="form-section"><i class="ft-user"></i>
+                                                        </h4> --}}
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="projectinput1">nama Mata
+                                                                        Pelajaran</label>
+                                                                    <input type="text" id="projectinput1"
+                                                                        class="form-control"
+                                                                        placeholder="isi nama mata pelajaran"
+                                                                        value="" name="name" hidden>
+                                                                    <input type="text" id="projectinput1"
+                                                                        class="form-control"
+                                                                        placeholder="isi nama mata pelajaran"
+                                                                        value="" name="name">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    {{-- <div class="form-actions">
+                                                            <button type="button" class="btn btn-warning mr-1">
+                                                                <i class="ft-x"></i> Cancel
+                                                            </button>
+                                                            <button type="submit" class="btn btn-primary">
+                                                                <i class="fa fa-check-square-o"></i> Save
+                                                            </button>
+                                                        </div> --}}
+                                                    {{-- </form> --}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn grey btn-outline-secondary"
+                                            data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-outline-primary">Save
+                                            changes</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                                @endif
+                                   
                     {{-- /modal edit --}}
 
 

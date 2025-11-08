@@ -2,6 +2,10 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudyController;
+use App\Http\Controllers\ClassroomController;
+use App\Http\Controllers\TeacherController;
+
+
 
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +25,9 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::resource('/study', StudyController::class);
+    Route::resource('/classroom', ClassroomController::class);
+    Route::resource('/teacher', TeacherController::class);
 });
+
 
 require __DIR__.'/auth.php';

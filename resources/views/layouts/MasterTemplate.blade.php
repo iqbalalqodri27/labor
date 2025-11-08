@@ -137,15 +137,15 @@
                             class="menu-title" data-i18n="">Mata Pelajaran</span></a>
                 </li>
 
-                <li class=" nav-item"><a href="#"><i class="ft-edit"></i><span class="menu-title"
+                <li class=" nav-item"><a href="/classroom"><i class="ft-edit"></i><span class="menu-title"
                             data-i18n="">Kelas</span></a>
                 </li>
 
-                <li class=" nav-item"><a href="#"><i class="ft-user"></i><span class="menu-title"
-                            data-i18n="">Dosen</span></a>
+                <li class=" nav-item"><a href="/teacher"><i class="ft-user"></i><span class="menu-title"
+                            data-i18n="">Dosen</span></ja>
                 </li>
 
-                <li class=" nav-item"><a href="#"><i class="ft-monitor"></i><span class="menu-title"
+                <li class=" nav-item"><a href="labor_use"><i class="ft-monitor"></i><span class="menu-title"
                             data-i18n="">pengguna Laborlaturium</span></a>
                 </li>
             </ul>
