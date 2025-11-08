@@ -142,10 +142,9 @@
                 </li>
 
                 <li class=" nav-item"><a href="/teacher"><i class="ft-user"></i><span class="menu-title"
-                            data-i18n="">Dosen</span></ja>
+                            data-i18n="">Dosen</span></a>
                 </li>
-
-                <li class=" nav-item"><a href="labor_use"><i class="ft-monitor"></i><span class="menu-title"
+                <li class=" nav-item"><a href="/LaboratoryUse"><i class="ft-monitor"></i><span class="menu-title"
                             data-i18n="">pengguna Laborlaturium</span></a>
                 </li>
             </ul>

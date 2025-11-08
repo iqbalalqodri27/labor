@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudyController;
 use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\LaboratoryUseController;
+
 
 
 
@@ -27,6 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/study', StudyController::class);
     Route::resource('/classroom', ClassroomController::class);
     Route::resource('/teacher', TeacherController::class);
+    Route::resource('/LaboratoryUse', LaboratoryUseController::class);
 });
 
 

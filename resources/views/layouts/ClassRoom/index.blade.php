@@ -70,6 +70,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>Name</th>
+                                                    <th>aksi</th>
 
                                                 </tr>
                                             </thead>
@@ -110,6 +111,7 @@
                                             <tfoot>
                                                 <tr>
                                                     <th>Name</th>
+                                                    <th>aksi</th>
 
                                                 </tr>
                                             </tfoot>

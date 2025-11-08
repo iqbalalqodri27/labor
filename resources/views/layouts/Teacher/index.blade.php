@@ -71,6 +71,7 @@
                                                 <tr>
                                                     <th>nip</th>
                                                     <th>Name</th>
+                                                    <th>aksi</th>
 
                                                 </tr>
                                             </thead>
@@ -113,6 +114,7 @@
                                                 <tr>
                                                     <th>nip</th>
                                                     <th>Name</th>
+                                                    <th>aksi</th>
 
                                                 </tr>
                                             </tfoot>
@@ -164,8 +166,8 @@
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                    <label for="projectinput1">nama Mata
-                                                                        Pelajaran</label>
+                                                                    <label for="projectinput1">nama Dosen
+                                                                        </label>
                                                                     <input type="text" id="projectinput1"
                                                                         class="form-control"
                                                                         placeholder="isi nama Dosen"
@@ -229,14 +231,18 @@
                                                         {{-- <h4 class="form-section"><i class="ft-user"></i>
                                                         </h4> --}}
                                                         <div class="row">
-                                                            <div class="col-md-6">
+                                                        <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                    <label for="projectinput1">nama Mata
-                                                                        Pelajaran</label>
+                                                                    <label for="projectinput1">NIP
+                                                                        </label>
                                                                     <input type="text" id="projectinput1"
                                                                         class="form-control"
                                                                         placeholder="isi nip Dosen"
-                                                                        value="{{ $teacher->nip }}" name="nip">
+                                                                        name="nip"
+                                                                        value="{{ $teacher->nip }}">
+                                                                </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
                                                                     <input type="text" id="projectinput1"
                                                                         class="form-control"
                                                                         placeholder="isi nama Dosen"

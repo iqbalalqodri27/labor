@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\LaboratoryUse;
+
 use Illuminate\Http\Request;
 
 class LaboratoryUseController extends Controller
@@ -12,8 +13,11 @@ class LaboratoryUseController extends Controller
      */
     public function index()
     {
-        //
+        $LaboratoryUses = LaboratoryUse::all();
+
+            return view('layouts.LaboratoryUse.index', compact('LaboratoryUses'));
     }
+    
 
     /**
      * Show the form for creating a new resource.

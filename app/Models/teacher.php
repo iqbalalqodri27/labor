@@ -3,6 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\LaboratoryUse;
+use HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class teacher extends Model
 {
@@ -10,4 +13,11 @@ class teacher extends Model
     'nip',    
     'name',
     ];
+
+    public function laboratoryuses(){
+
+    return $this->hasMany(LaboratoryUse::class);
+}
+
+
 }
